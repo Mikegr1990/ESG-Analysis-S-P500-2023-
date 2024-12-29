@@ -1,58 +1,74 @@
 # ESG-Analysis-S-P500-2023-
 This is my first data analysis project, where I explored ESG (Environmental, Social, and Governance) data for S&P 500 companies (2023).
 
-The data provided for this project were taken from Kaggle "S&P 500 ESG and Stocks Data" in the following link https://bit.ly/41UmKrR.
-This CSV file contains, among others, a data table on the ESG performance of companies in the S&P 500 index. The dataset likely includes the following columns:
-Company Name: The name of the S&P 500 companies.
-Ticker Symbol: The stock ticker symbol for each company.
-Sector: The sector or industry classification of each company.
-ESG Score: A composite score indicating the overall ESG performance of the company.
-Environmental Score (E): Represents the company’s environmental impact, including factors like carbon emissions, energy use, and waste management.
-Social Score (S): Measures the company’s relationships with its employees, suppliers, customers, and the communities where it operates.
-Governance Score (G): Evaluates corporate governance, including executive pay, audits, internal controls, and shareholder rights.
-Date: The date or time period for which the ESG data is relevant
-Market Cap: Total dollar value of all the shares of a company’s stock
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Dataset](#dataset)
+3. [Analysis Workflow](#analysis-workflow)
+    - [MySQL Data Cleaning](#mysql-data-cleaning)
+    - [Tableau Visualizations](#tableau-visualizations)
+4. [Key Insights](#key-insights)
+5. [What I Accomplished](#what-i-accomplished)
+6. [Feedback and Next Steps](#feedback-and-next-steps)
 
-The analysis was split into two major steps:
-1) Setting Up and Preparing Data in MySQL Workbench
-2) Creating Visualizations in Tableau
+The dataset, sourced from [Kaggle's "S&P 500 ESG and Stocks Data"](https://bit.ly/41UmKrR), includes:
+- **Company Name**: S&P 500 companies.
+- **Ticker Symbol**: Stock ticker for each company.
+- **Sector**: Industry classification.
+- **ESG Scores**:
+  - **Environmental (E)**: Carbon emissions, energy use, waste management.
+  - **Social (S)**: Employee relations, community impact.
+  - **Governance (G)**: Executive pay, audits, shareholder rights.
+- **Market Cap**: Total stock value.
+- **Date**: Relevant time period for ESG data.
 
-MySQL Workbench for data cleaning includes the following:
-- Create a new schema for the project
-- Import the CSV File
-  Imported the sp500_esg_data.csv file into MySQL Workbench as a new table named esg_data
-- Rename the columns properly and set the value type such as INT, DECIMAL, YEAR etc. (Data Type Validation)
-- Check for a Potential Primary Key:
-- Modify the symbol column to be NOT NULL and Set the symbol column as the primary key.
-- Check for null values
-- Check for duplicates
-- Check for Inconsistent or Erroneous Data 
-- Check for Outdated or Missing Dates for example if there are values for years < 2023 or >2024
-- Check for Relationships Between Columns  Verify that derived columns like total_esg match the sum of environment_score, social_score, and governance_score
-- Check for Case Sensitivity
-- Export the cleaned table to CSV
+### MySQL Data Cleaning
+1. **Created Schema**: Set up a new schema for the project.
+2. **Imported Dataset**: Uploaded `sp500_esg_data.csv` as a table named `esg_data`.
+3. **Column Renaming and Data Validation**:
+    - Renamed columns for clarity.
+    - Assigned appropriate data types (**INT**, **DECIMAL**, **YEAR**, etc.).
+4. **Primary Key Validation**: Modified `symbol` column to be `NOT NULL` and set as the primary key.
+5. **Cleaned Data**:
+    - Checked for null values, duplicates, inconsistent data, and erroneous dates.
+    - Verified relationships between derived columns (e.g., `total_esg = environmental + social + governance`).
+6. **Exported Clean Data**: Saved the cleaned table as a CSV file for visualization.
 
-Tableau for visualization to extract and present key insights includes the following:
-- Import the cleaned CSV File
-- Rename columns
-- Create the following Charts
-  Top 10 Companies by ESG Score 2023
-  Breakdown of ESG Scores for Top 10 Companies (2023)
-  Average ESG Scores by Sector
-  Market Cap vs. ESG Scores by Sector (2023)
-  Sector-Wise Distribution of ESG Scores
-  Top Companies by Environmental, Social, and Governance Scores (2023)
-- Create Dashboards
+### Tableau Visualizations
+1. **Imported Cleaned Data**: Loaded the cleaned CSV file into Tableau.
+2. **Created Charts**:
+    - Top 10 Companies by ESG Score (2023)
+    - Breakdown of ESG Scores for Top Companies
+    - Average ESG Scores by Sector
+    - Market Cap vs. ESG Scores by Sector (2023)
+    - Sector-Wise Distribution of ESG Scores
+    - Top Companies by Environmental, Social, and Governance Scores
+3. **Built Dashboards**: Designed interactive dashboards to tell a data-driven story.
 
-  What I Accomplished:
-  1) Identified top ESG performers, balanced sectors, and correlations with market cap.
-  2) Cleaned and prepared raw data in MySQL to ensure reliable insights.
-  3) Designed interactive dashboards in Tableau for clear storytelling.
- 
-Key Insights of the Project:
-a) Leaders: Occidental Petroleum leads in Environmental scores; Wells Fargo excels in Governance.
-b) Balanced Sectors: Consumer Staples stands out as the most balanced ESG sector.
-c) Industrials: This sector has the highest total ESG score and number of companies.
-d) Correlation: Market Cap does not strongly correlate with ESG scores.
+### Key Insights
+- **Top Performers**:
+    - *Environmental*: Occidental Petroleum.
+    - *Governance*: Wells Fargo.
+- **Balanced Sectors**: Consumer Staples has the most balanced ESG performance.
+- **Industrials Sector**:
+    - Highest total ESG score across all sectors.
+    - Largest number of companies represented.
+- **Market Cap Correlation**: No strong correlation with ESG scores.
 
-This project taught me the importance of data cleaning and visualization in uncovering actionable insights. I’m eager to continue learning and contributing to projects that use data for impact. I'd love your feedback or suggestions on this project—let’s connect and discuss!
+### Explore the Project
+- **Tableau Public Dashboard**: [View Here](https://bit.ly/3DwsNIS)
+- **Dataset on Kaggle**: [S&P 500 ESG and Stocks Data](https://bit.ly/41UmKrR)
+- **GitHub Repository**: [View Repository](your-github-link)
+
+### Feedback and Next Steps
+This project taught me the importance of data cleaning and visualization in uncovering actionable insights. 
+
+I’m eager to expand my skills in data analysis and visualization. I would love your feedback or suggestions—please feel free to reach out and connect!
+
+Let’s discuss how we can use data to make a positive impact.
+
+
+
+
+
+
