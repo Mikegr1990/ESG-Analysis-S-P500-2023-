@@ -58,7 +58,7 @@ The dataset, sourced from [Kaggle's "S&P 500 ESG and Stocks Data"](https://bit.l
 ### Explore the Project
 - **Tableau Public Dashboard**: [View Here](https://bit.ly/3DwsNIS)
 - **Dataset on Kaggle**: [S&P 500 ESG and Stocks Data](https://bit.ly/41UmKrR)
-- **GitHub Repository**: [View Repository](your-github-link)
+- **GitHub Repository**: [View Repository](https://github.com/Mikegr1990/ESG-Analysis-S-P500-2023-)
 
 ### Feedback and Next Steps
 This project taught me the importance of data cleaning and visualization in uncovering actionable insights. 
